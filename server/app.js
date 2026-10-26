@@ -1,0 +1,14 @@
+import express from 'express';
+import cors from 'cors';
+import { healthRouter } from './routes/health.routes.js';
+import { studentRouter } from './routes/student.routes.js';
+import { adminRouter } from './routes/admin.routes.js';
+import { errorHandler } from './middleware/errorHandler.js';
+export const app = express();
+app.use(cors({ origin: process.env.FRONTEND_ORIGIN || 'http://localhost:5173' }));
+app.use(express.json({ limit: '100kb' }));
+app.use('/api/health', healthRouter);
+app.use('/api/student', studentRouter);
+app.use('/api/admin', adminRouter);
+app.use((_req, res) => res.status(404).json({ success: false, error: { code: 'NOT_FOUND', message: 'Endpoint tidak ditemukan.' } }));
+app.use(errorHandler);
