@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Quiz Sekolah
 
 Aplikasi kuis sekolah full-stack. Siswa mengerjakan kuis tanpa akun. Admin mengelola kuis melalui API Express yang memverifikasi Firebase ID token dan profil admin.
@@ -62,3 +63,6 @@ Identitas siswa tanpa login tidak dapat menjamin identitas personal secara absol
 ## Produksi
 
 Jalankan backend Node.js persisten dengan environment variable server. Jangan menaruh private key pada `VITE_*`, frontend, log, atau repository. Tambahkan domain publik ke Authorized Domains Firebase Authentication. Deploy rules memakai Firebase CLI setelah rules direview. Deployment aplikasi belum dilakukan.
+=======
+# sekolah-web
+>>>>>>> c335cdf30e5cfbf5df537eb0c3c183bfd53cb023
